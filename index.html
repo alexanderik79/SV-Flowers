@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korica - Квіти та букети з доставкою</title>
+    <meta 
+      name="description" 
+      content="Ласкаво просимо до Korica! Розкішні букети, свіжі квіти та індивідуальні композиції з доставкою. Даруйте емоції разом з нами!"
+    >
+    <meta 
+      name="keywords" 
+      content="квіти, букети, доставка квітів, квітковий магазин, подарунки, троянди, флористика, композиції"
+    >
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lobster&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+    <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+  </head>
+
+  <body>
+
+    <div id="circle" style="display: none">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="burger-menu" onclick="toggleMenu()" data-aos="flip-down">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="side-menu" id="sideMenu">
+      <br>
+      <ul>
+        <li><a href="#categories" onclick="toggleMenu()">Меню</a></li>
+        <li><a href="#about-anchor" onclick="toggleMenu()">Про нас</a></li>
+        <li><a href="#delivery-anchor" onclick="toggleMenu()">Доставка</a></li>
+        <li><a href="javascript:void(0)" onclick="openCartModal()">Кошик</a></li>
+      </ul>
+      <br>
+      <div class="sticker">
+        <img src="img/flower2.png" alt="Fries"width="150" ><br>
+      </div>
+    </div>
+
+    <div class="side-menu-right" id="sideMenuRight">
+      <button class="close-button" onclick="toggleMenuRight()">×</button>
+      <div class="chat-container">
+        <h1 class="bot-h1">Бот ассистент</h1>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+          <input class="user-input" type="text" id="user-input" placeholder="Введи своє питання...">
+          <button class="send-button fa-brands fa-telegram"></button>
+        </div>
+        <!-- <button class="clear-button" onclick="clearChat()">Очистити</button> -->
+      </div>
+    </div>
+
+
+    <header data-aos="zoom-out" data-aos-duration="1000">
+    <!-- <header data-aos="zoom-out" > -->
+
+      <div class="header-container">
+
+        <h1 
+          class="food-logo" 
+          onclick="shakeLogo(this)" 
+          data-aos="fade-right" 
+          data-aos-duration="3000" 
+          style="cursor: pointer;">Korica 
+        </h1>
+        
+        <p
+          data-aos="fade-left" 
+          data-aos-duration="3000" >
+          КВІТИ ТА ДЕКОР
+        </p>
+
+        <button 
+          class="orderBtn" 
+          data-aos="fade-up" 
+          data-aos-offset="-600" 
+          data-aos-duration="2000" 
+          onclick="scrollToElement('categories')">Замовити
+        </button>
+      </div>
+
+      <div class="header-container-mob">
+
+        <h1 
+          class="food-logo-mob" 
+          onclick="shakeLogo(this)" 
+          data-aos="fade-right" 
+          data-aos-duration="3000" 
+          style="cursor: pointer;">Korica 
+        </h1>
+
+        <p
+          data-aos="fade-left" 
+          data-aos-duration="3000" >
+          КВІТИ ТА ДЕКОР
+        </p>
+
+        <button 
+          class="orderBtn-mob" 
+          data-aos="fade-up" 
+          data-aos-offset="-600" 
+          data-aos-duration="2000" 
+          onclick="scrollToElement('categories')">Замовити
+        </button>
+      </div>
+
+
+
+
+
+    </header>
+
+
+    <!--  -->
+
+    <div class="container" style="max-width: 1250px; width: 100%;">
+      <div id="categories" data-aos="fade-right" data-aos-easing="ease-in-sine">
+        <div id="category-list" class="category-scroll"></div>
+      </div>
+
+      <div id="products">
+        <div id="product-list"></div>
+      </div>
+
+      <!--  -->
+
+      <div class="sticker" id="about-anchor" data-aos="zoom-in" data-aos-duration="800">
+        <img src="img/flower3.png" alt="icecream" width="150" >
+      </div>
+      
+      <div id="about-restaurant">
+
+          <h2 class="restaurant-description">
+            Ласкаво просимо до Korica! 🌸
+          </h2>
+
+          <p>
+            У нашій крамниці квітів кожна композиція — це історія любові, 
+            радості та натхнення. Ми дбайливо поєднуємо найніжніші троянди, 
+            ароматні півонії та витончені орхідеї, створюючи букети, 
+            що зачаровують з першого погляду.
+            <br><br>
+            <strong>Korica</strong> — це місце, де квіти говорять замість слів. 
+            Подаруйте красу тим, кого любите! 
+          </p>
+
+          <br>
+          <hr>
+          <br>
+          <div class="restaurant-details">
+            <p><strong>Адреса:</strong> проспект Володимирський 123, м. Лубни</p>
+            <p><strong>Години роботи:</strong> Пн-Нд: 10:00 - 22:00</p>
+            <p><strong>Телефон:</strong> +380991234567</p>
+            <br>
+          </div>
+        </div>
+
+        <div class="sticker" id="delivery-anchor" data-aos="zoom-in" data-aos-duration="800">
+          <img src="img/flower2.png" alt="icecream" width="150" >
+        </div>
+
+        <section id="delivery-info" data-aos="zoom-in" data-aos-duration="800">
+          <h2>Доставка квітів від Korica</h2>
+          <p>
+            <strong>Швидка та дбайлива доставка квітів!</strong>  
+            Ми знаємо, як важливо дарувати емоції вчасно.  
+            Саме тому <strong>Korica</strong> пропонує  
+            <strong>оперативну доставку квіткових композицій</strong>,  
+            щоб кожен букет прибув свіжим і чарівним.
+          </p>
+          <h3>Чому обирають нас?</h3>
+          <p>
+            У <strong>Korica</strong> кожна квітка — це знак турботи.  
+            Ми створюємо стильні букети для будь-якої нагоди  
+            та доставляємо їх з любов’ю прямо до ваших дверей.
+          </p>
+          <p>
+            Не відкладайте радість!  
+            Замовляйте доставку квітів від <strong>Korica</strong>  
+            і даруйте щирі емоції разом із природною красою. 
+          </p>
+      </section>
+      
+      </div>
+
+      <!--  -->
+
+      <div class="sticker" data-aos="zoom-in" data-aos-duration="800">
+        <img src="img/flower1.png" alt="Burger" width="150" >
+        <br>
+      </div>
+
+      <!-- <div id="tg_layer">
+        <a
+          href="https://t.me/BotProduce"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="tg-button">
+            <div class="tg-icon">
+              <i class="fa-brands fa-telegram"></i>
+            </div>
+          </div>
+        </a>
+      </div> -->
+
+
+      <div id="tg_layer" onclick="toggleMenuRight()">
+        <div class="tg-button">
+          <div class="tg-icon">
+            <!-- <i class="fa-brands fa-telegram"></i> -->
+            <i class="fa-solid fa-comment-dots"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="cart_layer" onclick="openCartModal()">
+        <div
+          class="cart-button"
+        >
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="cart-count">0</div>
+        </div>
+      </div>
+
+      <footer>
+        <div id="social-links" class="social-links">
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+          />
+
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+            <i class="bi bi-youtube"></i>
+          </a>
+
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <div>
+          <a href="https://t.me/BotProduce" style="color:#835963; font-size: x-small;">webmaster</a>
+        </div>
+      </footer>
+
+    </div>
+
+    <div id="cart-modal" class="modal-cart">
+      <div id="cart">
+        <span class="close-modal" onclick="closeCartModal()">&times;</span>
+        <div>
+          <h2>Ваш кошик</h2>
+        </div>
+        <div id="customer-details">
+          <input type="text" id="customer-name" name="customer-name" required placeholder="Ім'я" >
+          <br><br>
+          <select type="text" id="customer-city" name="customer-city" required placeholder="Адреса">
+            <!-- <option value="" disabled selected>Оберіть місто</option> -->
+            <option value="Лубни">Лубни</option>
+            <option value="Пирятин">Пирятин</option>
+          </select>  
+          <br><br>
+          <input type="text" id="customer-address" name="customer-address" required placeholder="Адреса" >
+          <br><br>
+          <input type="tel" id="customer-phone" name="customer-phone" required placeholder="Телефон" >
+        </div>
+        <div id="cart-items"></div>
+        <div id="cart-summary">
+          <p>Всього: <span id="total-amount">0.00</span></p>
+          <button id="checkout">Оформити замовлення</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="orderModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 style="text-align: center" ;>Дякуємо!</h2>
+        <p>Замовлення № <span id="orderNumber"></span> успішно створено!</p>
+        <p>Сума замовлення -<span id="amount"></span> грн.</p>
+        <p>Наш менеджер скоро зв'яжеться з вами.</p>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="close-btn" class="close">&times;</span>
+        <h2 id="modal-title">Заголовок завантажується...</h2>
+        <p id="modal-description"></p>
+        <h3 id="modal-price">Ціна завантажується...</h3>
+        <h3 id="modal-total">Сума завантажується...</h3>
+
+        <div id="quantity-controls">
+          <button id="decrease" class="quantity-btn">-</button>
+          <span id="quantity">1</span>
+          <button id="increase" class="quantity-btn">+</button>
+        </div>
+        <div id="add-to-cart-btn-controls">
+          <button id="add-to-cart" class="add-to-cart-btn">В кошик</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="/js/aos.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/scroll-cat.js"></script>
+    <script src="/js/shake-cart.js"></script>
+    <script src="/js/side-panel.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/modal-view.js"></script>
+    <script src="/js/shake-logo.js"></script>
+    <script src="/js/order-modal.js"></script>
+    <script src="/js/bot.js"></script>
+
+    <script src="/js/arrow.js"></script>
+    <script src="/js/circle.js"></script>
+  </body>
+</html>
