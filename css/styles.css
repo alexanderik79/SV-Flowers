@@ -39,7 +39,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/img/flowers.jpg");
+    background-image: url("/img/flowers.png");
     background-repeat: repeat;
     background-size: 18%;
     opacity: 0.1; 
@@ -125,7 +125,7 @@ header {
 }
 
 .orderBtn:hover {
-    background-color: rgb(125, 180, 212);
+    background-color: rgb(66, 140, 184);
     transform: scale(1.1) !important;
 }
 
