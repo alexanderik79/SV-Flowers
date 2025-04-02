@@ -82,33 +82,34 @@ header {
 .header-container p {
   position: absolute;
   color: white;
-  font-weight: 600;
-  font-size: calc(var(--aspi) * 1.8);
-  font-family: "Montserrat Alternates", serif;
+  font-weight: 900;
+  font-size: calc(var(--aspi) * 4);
+  font-family: "Dancing Script", serif;
   text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
-  top: 46%;
-  left: 14%;
+  top: 36%;
+  left: 12%;
 }
 
 .header-container > div:first-child {
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: 8%;
   transform: translate(-50%, -50%);
   width: 3%; /* Размер top.png */
 }
 
 .food-logo {
-  font-family: "Dancing Script", cursive;
-  font-size: calc(var(--aspi) * 10);
-  font-weight: 800;
+  font-family: "Dancing Script", serif;  
+  font-size: calc(var(--aspi) *8);
+  font-weight: 2000;
   color: white;
   text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
   position: absolute;
-  top: 0%;
-  left: 3%;
-  width: 60%; 
-  max-width: 350px;
+  top: 10%;  
+  left: 12%;
+  width: auto;
+  max-width: none;
+  white-space: nowrap; 
 }
 
 .orderBtn {
@@ -129,6 +130,7 @@ header {
   background-color: rgb(66, 140, 184);
   transform: scale(1.1) !important;
 }
+
 
 
 /*---------------------------- CATEGORIES SECTION ------------------------------*/
