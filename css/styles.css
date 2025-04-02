@@ -85,7 +85,7 @@ header {
   font-weight: 900;
   font-size: calc(var(--aspi) * 4);
   font-family: "Dancing Script", serif;
-  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 8px 8px 8px rgba(215, 250, 255, 0.274);
   top: 36%;
   left: 12%;
 }
@@ -103,7 +103,7 @@ header {
   font-size: calc(var(--aspi) *8);
   font-weight: 2000;
   color: white;
-  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 8px 8px 8px rgba(215, 250, 255, 0.274);
   position: absolute;
   top: 10%;  
   left: 12%;
